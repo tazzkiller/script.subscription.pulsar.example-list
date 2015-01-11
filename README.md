@@ -30,9 +30,9 @@ subscription.integration(listing, ID,'MOVIE', settings.movie_folder)
 
 Subscribing Movies with IMDB_ID
 ===============================
-listing = ['Edge of tomorrow', 'Gone girl']  # example from list movies, the year isn't necessary
+listing = ['Edge of tomorrow', 'Gone girl']  `example from list movies, the year isn't necessary`
 
-ID = ['tt1631867', 'tt2267998'] # IMDB_ID, if it is empty the function will figure it out
+ID = ['tt1631867', 'tt2267998'] `IMDB_ID, if it is empty the function will figure it out`
 
 subscription.integration(listing, ID,'MOVIE', settings.movie_folder)
 

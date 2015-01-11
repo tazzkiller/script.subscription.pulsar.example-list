@@ -1,6 +1,6 @@
 Introduction
 ===================
-This is script allows to create personalized list of movies or TV Shows to be integrated in the local library and to be played for [Pulsar]https://github.com/steeve/plugin.video.pulsar
+This is script allows to create personalized list of movies or TV Shows to be integrated in the local library and to be played for [Pulsar](https://github.com/steeve/plugin.video.pulsar)
 
 The advantage is that you have all the tools from local library as trailer, cinema experience, etc.
 

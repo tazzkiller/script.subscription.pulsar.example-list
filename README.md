@@ -47,15 +47,14 @@ settings.show_folder = path to save the tv shows
 
 Browser to create the list from internet
 ============================================
-` define the browser to open URL`
-browser = subscription.Browser()
+**browser = subscription.Browser()**  ` define the browser to open URL`
 * browser.open(url)
 * url to open
 * return true if it is 200 status
 * browser.status : status and error
 * browser.content : content html
 
-browser.login(url, payload, verification expression) `open a page and do the login, return true if can login`
+**browser.login(url, payload, verification expression)** `open a page and do the login, return true if can login`
 
 * url login page
 * payload dictionary {'username': username, 'pass', password, ..} all the variable from the FORM

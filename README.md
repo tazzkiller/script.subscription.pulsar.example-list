@@ -1,25 +1,32 @@
 Introduction
 ===================
-This is script to create personal list to integrate in the local library.
+This is script allows to create personalized list of movies or TV Shows to be integrated in the local library and to be played for Pulsar
 
-The script creates a .strm file to be played for Pulsar.
+The advantage is that you have all the tools from local library as trailer, cinema experience, etc.
 
+The script makes a database, then you can run the script periodic and it will add only the new entries.  If you erase the file from the local library, it won't add it again.
 
-The list can be made manual or be created from internet.
+You can erase the database any moment from the script plugin.  
+
+It is possible to write the list manually or create them from internet.
 
 Subscribing TV shows
 ===================
-listing = ['Game of thrones', 'The Simpsons']  # example from list tv shows
+listing = ['Game of thrones', 'The Simpsons']  
+# example from list tv shows
 
-ID = [] # empty for tv shows
+ID = []
+# empty for tv shows
 
 subscription.integration(listing, ID,'SHOW', settings.show_folder)
 
 Subscribing Movies without IMDB_ID
 ===================================
-listing = ['Frozen (2013)', 'Guardians of the Galaxy (2014)']  # example from list movies, it is better to have the year
+listing = ['Frozen (2013)', 'Guardians of the Galaxy (2014)']
+# example from list movies, it is better to have the year
 
-ID = [] # IMDB_ID, if it is empty the function will figure it out
+ID = []
+# IMDB_ID, if it is empty the function will figure it out
 
 subscription.integration(listing, ID,'MOVIE', settings.movie_folder)
 

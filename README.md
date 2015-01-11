@@ -16,7 +16,7 @@ listing = ['Game of thrones', 'The Simpsons']  `example from list tv shows`
 
 ID = [] `empty for tv shows`
 
-**subscription.integration(**listing, ID,'SHOW', settings.show_folder**)**
+**subscription.integration(**listing, ID,'SHOW', path to save**)**
 
 Subscribing Movies without IMDB_ID
 ===================================
@@ -24,7 +24,7 @@ listing = ['Frozen (2013)', 'Guardians of the Galaxy (2014)'] `example from list
 
 ID = [] `IMDB_ID, if it is empty the function will figure it out`
 
-**subscription.integration(**listing, ID,'MOVIE', settings.movie_folder**)**
+**subscription.integration(**listing, ID,'MOVIE', path to save**)**
 
 Subscribing Movies with IMDB_ID
 ===============================
@@ -32,7 +32,7 @@ listing = ['Edge of tomorrow', 'Gone girl']  `example from list movies, the year
 
 ID = ['tt1631867', 'tt2267998'] `IMDB_ID, if it is empty the function will figure it out`
 
-**subscription.integration(**listing, ID,'MOVIE', settings.movie_folder**)**
+**subscription.integration(**listing, ID,'MOVIE', path to save**)**
 
 
 Settings class

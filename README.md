@@ -12,11 +12,9 @@ It is possible to write the list manually or create them from internet.
 
 Subscribing TV shows
 ===================
-listing = ['Game of thrones', 'The Simpsons']  
-# example from list tv shows
+listing = ['Game of thrones', 'The Simpsons']  ** example from list tv shows **
 
-ID = []
-# empty for tv shows
+ID = [] **empty for tv shows**
 
 subscription.integration(listing, ID,'SHOW', settings.show_folder)
 

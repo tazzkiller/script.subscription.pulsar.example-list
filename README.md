@@ -1,22 +1,51 @@
 Introduction
 ===================
-By default, the provider use the url address to search:
-	movie:  Movie title and year or IMDB_ID
-	episode: TV Show title plus S00E00
-	general search: not change
+This is script to create personal list to integrate in the local library.
 
-If you want to add some word to the search, you can use the extra field. 
-Ex: Swedish
-It would add the word 'Swedish' to every search
-	movie:  Movie title and year plus 'Swedish' or IMDB_ID
-	episode: TV Show title plus S00E00 plus 'Swedish'
+The script creates a .strm file to be played for Pulsar.
 
-Advanced Filtering
+
+The list can be made manual or be created from internet.
+
+Subscribing TV shows
 ===================
-I want to look for files that includes 720P and HDTV or 1080p:
+listing = ['Game of thrones', 'The Simpsons']  # example from list tv shows
+ID = [] # empty for tv shows
+subscription.integration(listing, ID,'SHOW', settings.show_folder)
 
-I need to write in the Accept files with:
-	720p HDTV, 1080p
-	
-The space always will be as 'OR' operator and the comma ',' as 'AND' operator
+Subscribing Movies without IMDB_ID
+===================================
+listing = ['Frozen (2013)', 'Guardians of the Galaxy (2014)']  # example from list movies, it is better to have the year
+ID = [] # IMDB_ID, if it is empty the function will figure it out
+subscription.integration(listing, ID,'MOVIE', settings.movie_folder)
 
+Subscribing Movies with IMDB_ID
+===============================
+listing = ['Edge of tomorrow', 'Gone girl']  # example from list movies, the year isn't necessary
+ID = ['tt1631867', 'tt2267998'] # IMDB_ID, if it is empty the function will figure it out
+subscription.integration(listing, ID,'MOVIE', settings.movie_folder)
+
+
+Settings class
+===============
+It gets information from addon configuration
+
+settings = subscription.Settings() # create the setting object
+
+settings.movie_folder = path to save the movies
+settings.show_folder = path to save the tv shows
+
+
+Browser to create the list from internet
+============================================
+# define the browser to open URL
+browser = subscription.Browser()
+# browser.open(url)
+# url to open
+# return true if it is 200 status
+# browser.status : status and error
+# browser.content : content html
+browser.login(url, payload, verification expression) # open a page and do the login, return true if can login
+# url login page
+# payload dictionary {'username': username, 'pass', password, ..} all the variable from the FORM
+# verification expression, string to check it couldn't login, like incorrect username and password.

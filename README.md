@@ -10,19 +10,25 @@ The list can be made manual or be created from internet.
 Subscribing TV shows
 ===================
 listing = ['Game of thrones', 'The Simpsons']  # example from list tv shows
+
 ID = [] # empty for tv shows
+
 subscription.integration(listing, ID,'SHOW', settings.show_folder)
 
 Subscribing Movies without IMDB_ID
 ===================================
 listing = ['Frozen (2013)', 'Guardians of the Galaxy (2014)']  # example from list movies, it is better to have the year
+
 ID = [] # IMDB_ID, if it is empty the function will figure it out
+
 subscription.integration(listing, ID,'MOVIE', settings.movie_folder)
 
 Subscribing Movies with IMDB_ID
 ===============================
 listing = ['Edge of tomorrow', 'Gone girl']  # example from list movies, the year isn't necessary
+
 ID = ['tt1631867', 'tt2267998'] # IMDB_ID, if it is empty the function will figure it out
+
 subscription.integration(listing, ID,'MOVIE', settings.movie_folder)
 
 

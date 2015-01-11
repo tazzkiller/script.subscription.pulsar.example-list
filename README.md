@@ -54,7 +54,7 @@ Browser to create the list from internet
 * browser.status : status and error
 * browser.content : content html
 
-**browser.login(url, payload, verification expression)** `open a page and do the login, return true if can login`
+**browser.login(**url, payload, verification expression**)** `open a page and do the login, return true if can login`
 
 * url login page
 * payload dictionary {'username': username, 'pass', password, ..} all the variable from the FORM
